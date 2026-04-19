@@ -1,6 +1,3 @@
-import streamlit as st
-st.title("Hello, Streamlit!")
-st.write("This is a simple Streamlit app.")
 import pandas as pd
 #Importing the trade data
 trade_data_lk = pd.read_excel('trade_lka.xlsx')
@@ -51,3 +48,7 @@ print(trade_data_lk)
 ##Removing NaN values from the dataset replacing them with zero
 trade_data_lk.isnull().sum()
 trade_data_lk.fillna(0, inplace=True)
+
+#Dashboard
+import streamlit as st
+st.title("Sri Lanka Trade Dashboard")
