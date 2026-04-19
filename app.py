@@ -52,3 +52,6 @@ trade_data_lk.fillna(0, inplace=True)
 #Dashboard
 import streamlit as st
 st.title("Sri Lanka Trade Dashboard")
+
+st.subheader("Trade Indicators Over Time")
+st.bar_chart(trade_data_lk.set_index('Year'))
