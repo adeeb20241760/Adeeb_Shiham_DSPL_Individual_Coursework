@@ -54,4 +54,29 @@ import streamlit as st
 st.title("Sri Lanka Trade Dashboard")
 
 st.subheader("Trade Indicators Over Time")
-st.bar_chart(trade_data_lk.set_index('Year'))
+st.bar_chart(trade_data_lk, x= 'Year', y=['Exports of Goods & Services (USD Billions)', 'Imports of Goods & Services (USD Billions)'], stack = False)
+
+import streamlit as st
+
+# Bar Chart: Import & Exports Trends
+year_range = st.slider(
+    'Select Year Range', 
+    min_value=int(trade_data_lk['Year'].min()), 
+    max_value=int(trade_data_lk['Year'].max()), 
+    value=(int(trade_data_lk['Year'].min()), int(trade_data_lk['Year'].max())), 
+    step=1
+)
+
+filtered_data = trade_data_lk[
+    (trade_data_lk['Year'] >= year_range[0]) & 
+    (trade_data_lk['Year'] <= year_range[1])
+]
+
+st.subheader(f"Import & Export Trends from {year_range[0]} to {year_range[1]}")
+st.bar_chart(
+    filtered_data, 
+    x='Year', 
+    y=['Exports of Goods & Services (USD Billions)', 'Imports of Goods & Services (USD Billions)'],
+    stack=False,
+    y_label= 'USD($ Billions)',
+)
