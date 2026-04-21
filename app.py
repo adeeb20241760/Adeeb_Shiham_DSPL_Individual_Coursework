@@ -78,3 +78,35 @@ st.bar_chart(
     stack=False,
     y_label= 'USD($ Billions)',
 )
+
+
+# Bar Chart: Service Export Trends
+st.subheader("Service Export Composition Over Time")
+
+year_range_2 = st.slider(
+    'Select Year Range', 
+    min_value=int(trade_data_lk['Year'].min()), 
+    max_value=int(trade_data_lk['Year'].max()), 
+    value=(int(trade_data_lk['Year'].min()), int(trade_data_lk['Year'].max())), 
+    step=1,
+    key = 'slider_2'
+)
+
+filtered_data_2 = trade_data_lk[
+    (trade_data_lk['Year'] >= year_range_2[0]) & 
+    (trade_data_lk['Year'] <= year_range_2[1])
+]
+select_box_2 = st.selectbox("Select Service Export Indicators",
+    options=[
+        'ICT Exports (% of Service Exports)',
+        'Travel Services (% of Service Exports)',
+        'Transport Services (% of Service Exports)',
+        'Insurance & Financial Services (% of Service Exports)',
+        'Communications & Computer Services (% of Service Exports)',
+        'Sum of All Service Exports'
+    ]
+)
+
+st.write("You selected:", select_box_2)
+
+st.bar_chart(x='Year', y=[select_box_2], data=filtered_data_2)
