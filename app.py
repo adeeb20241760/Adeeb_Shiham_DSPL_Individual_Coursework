@@ -88,12 +88,11 @@ filtered_data_2 = trade_data_lk[
 ]
 select_box_2 = st.selectbox("Select Service Export Indicators",
     options=[
-        'ICT Exports (% of Service Exports)',
-        'Travel Services (% of Service Exports)',
-        'Transport Services (% of Service Exports)',
-        'Insurance & Financial Services (% of Service Exports)',
-        'Communications & Computer Services (% of Service Exports)',
-        'Sum of All Service Exports'
+        'ICT service exports (% of service exports, BoP)',
+        'Travel services (% of service exports, BoP)',
+        'Transport Services (% of Service Exports, BoP)',
+        'Insurance and financial services (% of commercial service exports)',
+        'Communications, computer, etc. (% of service exports, BoP)'
     ]
 )
 
