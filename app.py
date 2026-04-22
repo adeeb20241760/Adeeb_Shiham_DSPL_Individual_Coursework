@@ -25,17 +25,7 @@ indicator_rename = {
     'Net trade in goods (BoP, current US$)': 'Net Trade in Goods (USD Billions)',
     'ICT service exports (BoP, current US$)': 'ICT Service Exports (USD Billions)',
 
-    # Percentage indicators → just clean up the names
-    'Trade in services (% of GDP)': 'Trade in Services (% of GDP)',
-    'ICT service exports (% of service exports, BoP)': 'ICT Exports (% of Service Exports)',
-    'Travel services (% of service exports, BoP)': 'Travel Services (% of Service Exports)',
-    'Travel services (% of service imports, BoP)': 'Travel Services (% of Service Imports)',
-    'Transport services (% of service exports, BoP)': 'Transport Services (% of Service Exports)',
-    'Transport services (% of service imports, BoP)': 'Transport Services (% of Service Imports)',
-    'Insurance and financial services (% of service exports, BoP)': 'Insurance & Financial Services (% of Service Exports)',
-    'Insurance and financial services (% of service imports, BoP)': 'Insurance & Financial Services (% of Service Imports)',
-    'Communications, computer, etc. (% of service exports, BoP)': 'Communications & Computer Services (% of Service Exports)',
-    'Communications, computer, etc. (% of service imports, BoP)': 'Communications & Computer Services (% of Service Imports)',
+        
 }
 trade_data_lk['Indicator Name']
 
